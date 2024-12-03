@@ -1,0 +1,38 @@
+[
+    {
+        "label": "streamlit",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "streamlit",
+        "description": "streamlit",
+        "detail": "streamlit",
+        "documentation": {}
+    },
+    {
+        "label": "process_vcf",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def process_vcf(file_content: str) -> str:\n    \"\"\"\n    Traite le contenu d'un fichier .vcf pour appliquer les règles suivantes :\n    - Remplace les numéros commençant par 00229, 229, ou +229 par +22901.\n    - Ajoute le préfixe 01 aux numéros locaux commençant par un chiffre compris entre 40 et 99.\n    Args:\n        file_content (str): Contenu du fichier .vcf.\n    Returns:\n        str: Contenu du fichier .vcf modifié.\n    \"\"\"",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "process_phone_numbers_in_vcard",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def process_phone_numbers_in_vcard(vcard_lines):\n    \"\"\"\n    Traite les numéros de téléphone dans une carte de visite.\n    Args:\n        vcard_lines (list): Liste des lignes d'une carte de visite.\n    Returns:\n        list: Liste modifiée des lignes d'une carte de visite.\n    \"\"\"\n    updated_vcard = []\n    for line in vcard_lines:",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "uploaded_file",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "uploaded_file = st.file_uploader(\"Téléchargez un fichier .vcf\", type=[\"vcf\"])\nif uploaded_file:\n    try:\n        # Lire le contenu du fichier téléchargé\n        file_content = uploaded_file.read().decode(\"utf-8\")\n        # Traiter le fichier\n        updated_content = process_vcf(file_content)\n        # Permettre le téléchargement du fichier modifié\n        st.success(\"Le fichier a été traité avec succès.\")\n        st.download_button(",
+        "detail": "app",
+        "documentation": {}
+    }
+]
